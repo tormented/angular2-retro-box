@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {CardListComponent} from "./components/card-list/card-list.component";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.css'],
+	entryComponents: [CardListComponent]
 })
-export class AppComponent {
-  title = 'app works!';
-}
+export class AppComponent {}
