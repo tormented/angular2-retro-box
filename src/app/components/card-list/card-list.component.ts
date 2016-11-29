@@ -16,9 +16,11 @@ export class CardListComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this.cards = this.cardService.getCardList();
-		console.log(this.cards);
+		this.getCardList();
+	}
 
+	getCardList(){
+		this.cardService.getCardList().then(cards => this.cards = cards);
 	}
 
 	public cards: Array<Card> = [];

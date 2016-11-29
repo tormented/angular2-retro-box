@@ -7,12 +7,15 @@ import {MaterialModule} from '@angular/material';
 import {AppComponent} from './app.component';
 import { CardListComponent } from './components/card-list/card-list.component';
 import { CardComponent } from './components/card/card.component';
+import { NewCardComponent } from './components/new-card/new-card.component';
+import {CardService} from "./services/card/card.service";
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		CardListComponent,
-		CardComponent
+		CardComponent,
+		NewCardComponent
 	],
 	imports: [
 		BrowserModule,
@@ -20,8 +23,9 @@ import { CardComponent } from './components/card/card.component';
 		HttpModule,
 		MaterialModule.forRoot()
 	],
-	providers: [],
-	bootstrap: [AppComponent]
+	providers: [CardService],
+	bootstrap: [AppComponent],
+	entryComponents: [NewCardComponent]
 })
 export class AppModule {
 }

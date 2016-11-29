@@ -1,5 +1,5 @@
 export class Card {
-	id: number;
+	id: string;
 	author: string;
 	text: string;
 

@@ -1,0 +1,6 @@
+<table>
+	<tr><td><md-input placeholder="Name" *ngIf="!isAnonymous" [(ngModel)]="author"></md-input></td></tr>
+	<tr><td><md-checkbox [(ngModel)]="isAnonymous"><p>Post like Anonymous</p></md-checkbox></td></tr>
+	<tr><td><md-textarea placeholder="What's happened?" resize="false" [(ngModel)]="text"></md-textarea></td></tr>
+	<tr><td align="right"><button md-raised-button color="primary" (click)="postCard()">POST</button></td></tr>
+</table>
